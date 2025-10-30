@@ -1,0 +1,15 @@
+# Maven
+mvnw
+mvnw.cmd
+.target
+.target/
+target
+**/target
+
+# Node
+ui/node_modules
+ui/dist
+
+# Misc
+.git
+.gitignore
