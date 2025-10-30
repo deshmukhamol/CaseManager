@@ -1,0 +1,9 @@
+/target/
+/.idea/
+/.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/
+*.iml
+uploads/
+ui/node_modules/
+ui/dist/
+*.log
