@@ -15,12 +15,37 @@ manager approval.
 
 ## Running locally
 
+### Directly on your machine
+
+```bash
+mvn spring-boot:run
+
+## Running locally
+
 ```bash
 ./mvnw spring-boot:run
 ```
 
 The application uses an in-memory H2 database. An H2 console is available at
 `http://localhost:8080/h2-console` (JDBC URL `jdbc:h2:mem:casemanager`).
+
+### Using Docker Compose
+
+Launch both the Spring Boot API and the React development server with one command:
+
+```bash
+docker compose up --build
+```
+
+The API will be available at `http://localhost:8080` and the React UI at
+`http://localhost:5173`. Changes to the source code are hot-reloaded by the dev
+servers inside the containers, making it easy to simulate the full experience
+without installing local toolchains. Press `Ctrl+C` to stop the services when
+you are finished.
+
+To customise the allowed CORS origins exposed by the API, set the
+`APP_CORS_ALLOWED_ORIGINS` environment variable when starting the container
+(`app.cors.allowed-origins` in `application.properties` when running locally).
 
 ## React web UI
 
