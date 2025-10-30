@@ -3,6 +3,7 @@
 A Spring Boot case management REST API built on top of the Flowable CMMN engine. The service allows
 case workers to view cases assigned to them, upload supporting documents, and submit actions for
 manager approval. A companion React single-page application is included for the case worker UI.
+manager approval.
 
 ## Features
 
