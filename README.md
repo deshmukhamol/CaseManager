@@ -17,6 +17,10 @@ manager approval.
 
 ### Directly on your machine
 
+Run the following commands from the repository root (`CaseManager/`).
+
+```bash
+mvn spring-boot:run
 ```bash
 mvn spring-boot:run
 
@@ -31,6 +35,7 @@ The application uses an in-memory H2 database. An H2 console is available at
 
 ### Using Docker Compose
 
+Launch both the Spring Boot API and the React development server with one command from the repository root:
 Launch both the Spring Boot API and the React development server with one command:
 
 ```bash
@@ -47,9 +52,33 @@ To customise the allowed CORS origins exposed by the API, set the
 `APP_CORS_ALLOWED_ORIGINS` environment variable when starting the container
 (`app.cors.allowed-origins` in `application.properties` when running locally).
 
+### One-click cloud workspace (Gitpod)
+
+If you would like to try the application in a cloud-hosted development
+environment without installing anything locally, you can launch a Gitpod
+workspace using the pre-configured setup in this repository:
+
+1. Ensure the project is hosted in a Git provider that Gitpod can access
+   (GitHub, GitLab, or Bitbucket).
+2. Open `https://gitpod.io/#<repository-url>` in your browser, replacing
+   `<repository-url>` with the HTTPS URL of your fork or copy of this project.
+3. Gitpod builds a workspace image (defined in `.gitpod.Dockerfile`) that
+   includes Maven, OpenJDK 17, Node.js, and Docker Compose.
+4. Once the workspace is ready, the provided task automatically runs
+   `docker compose up` so the Spring Boot API and React UI start together.
+5. Gitpod exposes the React development server on port 5173. Use the “Open
+   Browser” button in the port list to open the UI, or copy the provided public
+   URL to share the running simulation.
+
+Because Gitpod generates a unique URL for each workspace, you control when and
+how long the simulation stays accessible. Shut down the workspace when you are
+finished to tear down the temporary environment.
+
 ## React web UI
 
 The `ui/` directory contains a Vite-powered React application for case workers.
+
+From the `ui/` directory (inside the repository root), run:
 
 ```bash
 cd ui

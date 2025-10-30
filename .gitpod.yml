@@ -1,0 +1,17 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Start stack
+    init: |
+      docker compose pull || true
+      docker compose build
+    command: docker compose up
+
+ports:
+  - port: 8080
+    onOpen: ignore
+    visibility: private
+  - port: 5173
+    onOpen: open-preview
+    visibility: public
