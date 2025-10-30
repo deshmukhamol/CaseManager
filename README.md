@@ -3,6 +3,7 @@
 A Spring Boot case management REST API built on top of the Flowable CMMN engine. The service allows
 case workers to view cases assigned to them, upload supporting documents, and submit actions for
 manager approval. A companion React single-page application is included for the case worker UI.
+manager approval.
 
 ## Features
 
@@ -20,6 +21,13 @@ Run the following commands from the repository root (`CaseManager/`).
 
 ```bash
 mvn spring-boot:run
+```bash
+mvn spring-boot:run
+
+## Running locally
+
+```bash
+./mvnw spring-boot:run
 ```
 
 The application uses an in-memory H2 database. An H2 console is available at
@@ -28,6 +36,7 @@ The application uses an in-memory H2 database. An H2 console is available at
 ### Using Docker Compose
 
 Launch both the Spring Boot API and the React development server with one command from the repository root:
+Launch both the Spring Boot API and the React development server with one command:
 
 ```bash
 docker compose up --build
